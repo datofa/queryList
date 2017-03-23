@@ -1,0 +1,9 @@
+-- Create temporary table
+CREATE GLOBAL TEMPORARY TABLE TEMP_TABLE_NAME
+ON COMMIT DELETE ROWS -- delete table data / row on commit
+AS SELECT * FROM TABLE_NAME;
+
+
+-- insert data
+INSERT INTO TEMP_TABLE_NAME
+SELECT * FROM TABLE_NAME;
